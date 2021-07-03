@@ -14,7 +14,7 @@ import java.io.FileReader;
 public class ZTIOMain
 {
 
-    String IO_TEXT_FILE_NAME = "io_text_file.txt";
+    String IO_TEXT_FILE_NAME = "io_text_file_1st_line_int_2nd_line_string.txt";
     
     public void tryWithResource_ClosesAutoClosablesBeforeFinallyBlock() {
         File file = new File(IO_TEXT_FILE_NAME);
@@ -43,6 +43,11 @@ public class ZTIOMain
         } finally {
             System.out.println("Finally block");
         }
+    }
+    
+    public void differenceBetweenScannerReadlineAndBufferedReaderReadLine()
+    {
+    	
     }
     
 }
