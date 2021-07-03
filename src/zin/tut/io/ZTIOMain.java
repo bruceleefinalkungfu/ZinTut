@@ -20,7 +20,8 @@ public class ZTIOMain
         File file = new File(IO_TEXT_FILE_NAME);
         try(
             /**
-             * Both bufferedReader and fileReader are closed in the same order, after finishing the try block and before finally block
+             * BufferedReader is closed before fileReader after finishing the try block and before finally block
+             * ZTIOMyFileReader close called twice. bufferedReader.close() also called its fileReader's close
              */
             FileReader fileReader = new ZTIOMyFileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
