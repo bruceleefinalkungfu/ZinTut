@@ -16,6 +16,10 @@ public class ZTIOMainTest
     @Test public void tryWithResource() {
         ztioMain.tryWithResource_ClosesAutoClosablesBeforeFinallyBlock();
     }
+    
+    @Test public void differenceBetweenScannerAndBufferedReader() {
+    	ztioMain.differenceBetweenScannerAndBufferedReader();
+    }
 }
 
 
