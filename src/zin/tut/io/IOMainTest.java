@@ -9,9 +9,9 @@ package zin.tut.io;
 
 import org.junit.Test;
 
-public class ZTIOMainTest
+public class IOMainTest
 {
-    ZTIOMain ztioMain = new ZTIOMain();
+    IOMain ztioMain = new IOMain();
     
     @Test public void tryWithResource() {
         ztioMain.tryWithResource_ClosesAutoClosablesBeforeFinallyBlock();

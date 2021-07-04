@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 import static zin.tools.ZIO.*;
 
-public class ZTIOMain
+public class IOMain
 {
 
     String IO_TEXT_FILE_NAME = "io_text_file_1st_line_int_2nd_line_string.txt";
@@ -27,7 +27,7 @@ public class ZTIOMain
              * BufferedReader is closed before fileReader after finishing the try block and before finally block
              * ZTIOMyFileReader close called twice. bufferedReader.close() also called its fileReader's close
              */
-            FileReader fileReader = new ZTIOMyFileReader(file);
+            FileReader fileReader = new IOMyFileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             /**
              * Compile time error : String does not implement AutoClosable
@@ -52,7 +52,7 @@ public class ZTIOMain
     public void differenceBetweenScannerAndBufferedReader() {
     	File file = getFile();
     	try (
-                FileReader fileReader = new ZTIOMyFileReader(file);
+                FileReader fileReader = new IOMyFileReader(file);
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
     			FileInputStream fileInputStream = new FileInputStream(file);
     			Scanner scanner = new Scanner(fileInputStream);

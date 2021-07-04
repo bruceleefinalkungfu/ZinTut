@@ -13,20 +13,20 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class ZTIOMyFileReader extends FileReader
+public class IOMyFileReader extends FileReader
 {
 
-    public ZTIOMyFileReader(File file) throws FileNotFoundException
+    public IOMyFileReader(File file) throws FileNotFoundException
     {
         super(file);
     }
 
-    public ZTIOMyFileReader(FileDescriptor fd)
+    public IOMyFileReader(FileDescriptor fd)
     {
         super(fd);
     }
 
-    public ZTIOMyFileReader(String fileName) throws FileNotFoundException
+    public IOMyFileReader(String fileName) throws FileNotFoundException
     {
         super(fileName);
     }
