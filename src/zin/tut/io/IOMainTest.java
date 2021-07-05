@@ -20,6 +20,10 @@ public class IOMainTest
     @Test public void differenceBetweenScannerAndBufferedReader() {
     	ztioMain.differenceBetweenScannerAndBufferedReader();
     }
+    
+    @Test public void scannerNextLineWeirdWorking() {
+    	ztioMain.scannerNextLineWeirdWorking();
+    }
 }
 
 

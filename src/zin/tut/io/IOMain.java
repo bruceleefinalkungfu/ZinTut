@@ -87,9 +87,23 @@ public class IOMain
     		
     	} catch(Exception e) {
             print("Exception "+e.getMessage());
-        } finally {
-            print("Finally block");
-        }
+        } finally { }
+    }
+    
+    public void scannerNextLineWeirdWorking()
+    {
+    	try (
+    			Scanner scanner = new Scanner("Read this word\nGo to the Next line\nAnd again.");
+    		) {
+    		String firstWordRead = scanner.next();
+    		String remainingWordsInLine = scanner.nextLine();
+    		// It prints Read. Because it stops at the first whitespace
+    		print("First word: " + firstWordRead);
+    		// It print ' this word' because that many characters are left before the first \n
+    		print("Scanner next Line result: " + remainingWordsInLine);
+    	} catch (Exception e) {
+    		print("Exception "+e.getMessage());
+    	} finally { }
     }
     
     private File getFile() {
