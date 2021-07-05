@@ -90,7 +90,7 @@ public class IOMain
         } finally { }
     }
     
-    public void scannerNextLineWeirdWorking()
+    public void scannerNextLineStartsFromWhereItLeftOff()
     {
     	try (
     			Scanner scanner = new Scanner("Read this word\nGo to the Next line\nAnd again.");

@@ -22,7 +22,7 @@ public class IOMainTest
     }
     
     @Test public void scannerNextLineWeirdWorking() {
-    	ztioMain.scannerNextLineWeirdWorking();
+    	ztioMain.scannerNextLineStartsFromWhereItLeftOff();
     }
 }
 
