@@ -15,6 +15,17 @@ import java.util.Scanner;
 
 import static zin.tools.ZIO.*;
 
+/**
+ * -----------------------------------
+ * Q. What are I/O streams?
+ * A. Streams are fixed size FIFO queues of bytes. A process writes to an O/P stream & reads from I/P stream.
+ * Source and destination connecting the stream could be a process, file system, or TCP stack for socket, or a peripheral device.
+ * 
+ * Some streams you can re read after reseting it. Some you can't.
+ * 
+ * @author anuragawasthi
+ *
+ */
 public class IOMain
 {
 
