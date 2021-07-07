@@ -3,6 +3,10 @@ package zin.tut.inherit;
 import java.util.Arrays;
 import java.util.List;
 
+import zin.tut.io.IOEasyMain;
+
+import static zin.tools.ZIO.*;
+
 /**
  * @author anuragawasthi
  *
@@ -12,6 +16,7 @@ public class InheritanceEasyMain {
 	public void needOfWildCard() {
 		List<Parent> parents = Arrays.asList(new Parent());
 		List<Child1> child1s = Arrays.asList(new Child1());
+
 		// Working
 		methodAcceptingArrayOfParent(new Child1[] {new Child1()});
 		// Compile time error
@@ -24,6 +29,9 @@ public class InheritanceEasyMain {
 		methodAcceptingListOfWildCardSuperClassingChild1(parents);
 		methodAcceptingListOfWildCardSuperClassingChild1(child1s);
 		methodAcceptingListOfWildCardSuperClassingChild1(Arrays.asList(new Object()));
+		
+		Child1 child1 = new Child1();
+		print(child1.childMethod());
 		
 	}
 
@@ -40,9 +48,9 @@ public class InheritanceEasyMain {
 		// list.add(new Parent());
 		// list.add(new Child1());
 		
-		// You can only add T in it
+		// You can only add T in it at compile time but at runtime UnsupportedOperationException
 		T t = null;
-		list.add(t);
+		//list.add(t);
 	}
 	
 	private void methodAcceptingListOfWildCardSuperClassingChild1(List<? super Child1> list) {
@@ -50,4 +58,9 @@ public class InheritanceEasyMain {
 		 * You can't use super with Generics, they can only be used with wild card (?)
 		 */
 	}
+    
+	public static void main(String[] args) {
+    	runAllMethod(InheritanceEasyMain.class);
+    }
+    
 }

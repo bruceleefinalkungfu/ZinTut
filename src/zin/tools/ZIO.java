@@ -1,20 +1,17 @@
 package zin.tools;
 
-import static zin.tools.ZIO.print;
-
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
-import zin.tut.io.IOToughMain;
-
 public class ZIO {
 
-	public static void print(String s) {
+	public static String print(String s) {
 		String callingName = getClassNameAndMethodName(5);
 		if(callingName != null && !callingName.trim().isEmpty()) {
 			s = callingName + ": " + s;
 		}
 		System.out.println(s);
+		return s;
 	}
 
 	/**
