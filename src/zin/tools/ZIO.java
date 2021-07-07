@@ -1,5 +1,12 @@
 package zin.tools;
 
+import static zin.tools.ZIO.print;
+
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
+
+import zin.tut.io.IOToughMain;
+
 public class ZIO {
 
 	public static void print(String s) {
@@ -64,5 +71,25 @@ public class ZIO {
 	
 	public static StackTraceElement[] getStackTrace() {
 		return Thread.currentThread().getStackTrace();
+	}
+	
+	public static <T> void runAllMethod(Class<T> clz) {
+		try {
+			T obj = clz.newInstance();
+			Method[] methods = clz.getDeclaredMethods();
+			for(Method method : methods) {
+	    		try {
+	    			if (Modifier.isPublic(method.getModifiers()) && ! Modifier.isStatic(method.getModifiers())) {
+		    			method.invoke(obj);
+		    			System.out.println("---------"+method.getName()+" executed successfully--------");
+	    			}
+	    		} catch(Exception e) {
+	    			print("Exception while executing method "+method.getName());
+	    			e.printStackTrace();
+	    		}
+	    	}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

@@ -1,10 +1,3 @@
-/*
- * Copyright (c) Siemens AG 2021 ALL RIGHTS RESERVED.
- *
- * Sensproducts  
- * 
- */
-
 package zin.tut.io;
 
 import java.io.File;
@@ -39,10 +32,3 @@ public class IOMyFileReader extends FileReader
     }
     
 }
-
-
-/*
- * Copyright (c) Siemens AG 2021 ALL RIGHTS RESERVED
- *
- * Sensproducts
- */
