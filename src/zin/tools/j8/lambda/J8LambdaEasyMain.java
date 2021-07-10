@@ -15,6 +15,10 @@ public class J8LambdaEasyMain {
 		executorService.submit(() -> voidMethod());
 		// This lambda is considered Callable because it returns something
 		executorService.submit(() -> returningMethod());
+		// Runnable because not returning anything
+		executorService.submit(() -> {
+			returningMethod();
+		});
 	}
 
 	private void voidMethod() {

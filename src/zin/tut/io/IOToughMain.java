@@ -75,6 +75,10 @@ public class IOToughMain
     	} finally { }
     }
     
+    public void whatIsReadObjectInObjectAndWhyFinal() {
+    	
+    }
+    
     private File getFile() {
     	return new File(IO_TEXT_FILE_NAME);
     }
