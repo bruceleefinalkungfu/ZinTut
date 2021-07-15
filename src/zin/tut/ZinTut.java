@@ -1,5 +1,7 @@
 package zin.tut;
 
+import java.util.TreeMap;
+
 /**
  * The purpose of this project is to learn things by looking at the code
  * Since there can be alot of code. We aim to reduce the number of lines
@@ -15,5 +17,7 @@ package zin.tut;
  */
 public class ZinTut
 {
-    
+	public static void main(String[] args) {
+		new TreeMap<>();
+	}
 }

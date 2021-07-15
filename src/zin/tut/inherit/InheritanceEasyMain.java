@@ -48,7 +48,8 @@ public class InheritanceEasyMain {
 		// list.add(new Parent());
 		// list.add(new Child1());
 		
-		// You can only add T in it at compile time but at runtime UnsupportedOperationException
+		// You can only add T in it at compile time
+		// but at runtime UnsupportedOperationException because it was not ArrayList
 		T t = null;
 		//list.add(t);
 	}
