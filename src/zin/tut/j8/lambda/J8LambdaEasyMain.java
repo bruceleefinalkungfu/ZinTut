@@ -1,4 +1,4 @@
-package zin.tools.j8.lambda;
+package zin.tut.j8.lambda;
 
 import static zin.tools.ZIO.*;
 

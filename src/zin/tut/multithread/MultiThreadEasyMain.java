@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-import zin.tools.j8.lambda.J8LambdaEasyMain;
+import zin.tut.j8.lambda.J8LambdaEasyMain;
 
 import static zin.tools.ZIO.*;
 
